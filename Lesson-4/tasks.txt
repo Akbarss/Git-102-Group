@@ -1,0 +1,78 @@
+Задача 1: Фильтрация массива
+У вас есть массив чисел. Используя метод filter, создайте новый массив, который содержит только положительные числа.
+
+
+const numbers = [-10, 5, 20, -4, 12, -7, 6];
+
+console.log(positiveNumbers); // Ожидаемый результат: [5, 20, 12, 6]
+
+
+Задача 2: Поиск объекта в массиве
+Дан массив объектов, представляющих книги. Используя метод find, найдите книгу с заголовком 'The Great Gatsby'.
+
+
+const books = [
+  { id: 1, title: '1984', author: 'George Orwell' },
+  { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee' },
+  { id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
+  { id: 4, title: 'Moby Dick', author: 'Herman Melville' }
+];
+
+console.log(book); // Ожидаемый результат: { id: 3, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' }
+
+
+Задача 3: Индекс элемента в массиве
+Дан массив строк. Используя метод findIndex, найдите индекс первого элемента, который начинается с буквы 'C'.
+
+
+const words = ['Apple', 'Banana', 'Cherry', 'Date', 'Cucumber', 'Fig'];
+
+console.log(index); // Ожидаемый результат: 2
+
+
+Задача 4: Проверка наличия элемента
+У вас есть массив имен пользователей. Используя метод includes, проверьте, есть ли в массиве имя 'John'.
+
+
+const users = ['Alice', 'Bob', 'Charlie', 'David'];
+
+console.log(hasJohn); // Ожидаемый результат: false
+
+
+Задача 5: Сортировка массива объектов
+Дан массив объектов, представляющих товары, каждый из которых имеет цену. Используя метод sort, отсортируйте массив по цене в порядке возрастания.
+
+
+const products = [
+  { name: 'Laptop', price: 1200 },
+  { name: 'Smartphone', price: 800 },
+  { name: 'Tablet', price: 600 },
+  { name: 'Smartwatch', price: 200 }
+];
+
+console.log(sortedProducts);
+// Ожидаемый результат: 
+// [
+//   { name: 'Smartwatch', price: 200 },
+//   { name: 'Tablet', price: 600 },
+//   { name: 'Smartphone', price: 800 },
+//   { name: 'Laptop', price: 1200 }
+// ]
+
+
+Задача 6: Сортировка строк в алфавитном порядке
+Дан массив строк, представляющих названия городов. Используя метод sort, отсортируйте их в алфавитном порядке.
+
+
+const cities = ['Berlin', 'Amsterdam', 'London', 'Paris', 'New York'];
+
+console.log(sortedCities); // Ожидаемый результат: ['Amsterdam', 'Berlin', 'London', 'New York', 'Paris']
+
+
+Задача 7: Фильтрация по длине строки
+Дан массив строк. Используя метод filter, создайте новый массив, содержащий только строки длиной больше 5 символов.
+
+
+const words = ['short', 'longer', 'lengthy', 'tiny', 'big', 'grand'];
+
+console.log(longWords); // Ожидаемый результат: ['longer', 'lengthy', 'grand']
