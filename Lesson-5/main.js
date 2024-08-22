@@ -77,3 +77,37 @@ switch (day) {
   default:
     console.log("Неверный день");
 }
+
+// For
+
+// Пример 1: Простой вывод элементов массива:
+
+let fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach((fruit, index) => {
+  console.log(`Fruit at index ${index}: ${fruit}`);
+});
+
+// Пример 2: Увеличение каждого элемента на 1:
+
+let numbers = [1, 2, 3, 4, 5];
+let incrementedNumbers = [];
+
+numbers.forEach((number) => {
+  incrementedNumbers.push(number + 1);
+});
+
+console.log(incrementedNumbers);
+
+/// Пример 3: Фильтрация элементов массива:
+
+let scores = [85, 92, 78, 90, 88];
+let passingScores = [];
+
+scores.forEach((score) => {
+  if (score >= 90) {
+    passingScores.push(score);
+  }
+});
+
+console.log("Passing scores:", passingScores);
