@@ -1,23 +1,23 @@
-let accessAllowed;
-let age = prompt("Сколько вам лет?", "");
+// let accessAllowed;
+// let age = prompt("Сколько вам лет?", "");
 
-if (age > 18) {
-  accessAllowed = true;
-} else {
-  accessAllowed = false;
-}
+// if (age > 18) {
+//   accessAllowed = true;
+// } else {
+//   accessAllowed = false;
+// }
 
-alert(accessAllowed);
+// alert(accessAllowed);
 
 // let accessAllowed = (age > 18) ? true : false;
 
-let company = prompt("Какая компания создала JavaScript?", "");
+// let company = prompt("Какая компания создала JavaScript?", "");
 
-if (company == "Netscape") {
-  alert("Верно!");
-} else {
-  alert("Неправильно.");
-}
+// if (company == "Netscape") {
+//   alert("Верно!");
+// } else {
+//   alert("Неправильно.");
+// }
 
 // let message;
 
@@ -36,78 +36,64 @@ if (company == "Netscape") {
 //   (login == '') ? 'Нет логина' :
 //   '';
 
-const role = "admin";
+// const role = "admin";
 
-switch (role) {
-  case "user":
-    console.log("Привет, пользователь!");
-  case "admin":
-    console.log("Привет, администратор!");
-  case "superadmin":
-    console.log("Привет, суперадмин!");
-    break;
-  default:
-    console.log("Привет, гость!");
+// switch (role) {
+//   case "user":
+//     console.log("Привет, пользователь!");
+//   case "admin":
+//     console.log("Привет, администратор!");
+//   case "superadmin":
+//     console.log("Привет, суперадмин!");
+//     break;
+//   default:
+//     console.log("Привет, гость!");
+// }
+
+// const day = 3;
+
+// switch (day) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sunday");
+//     break;
+//   default:
+//     console.log("Неверный день");
+// }
+
+const num = [1, 2, 3, 4, 5, 6, 7, 8];
+const incrementNum = [];
+
+num.forEach((i) => {
+  incrementNum.push(i + 1);
+});
+
+console.log(incrementNum);
+
+const n = [85, 92, 78, 90, 88];
+let newN = [];
+
+function squareNumbers(arr) {
+  return arr.map((number) => number + number);
 }
 
-const day = 3;
-
-switch (day) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("Wednesday");
-    break;
-  case 4:
-    console.log("Thursday");
-    break;
-  case 5:
-    console.log("Friday");
-    break;
-  case 6:
-    console.log("Saturday");
-    break;
-  case 7:
-    console.log("Sunday");
-    break;
-  default:
-    console.log("Неверный день");
-}
-
-// For
-
-// Пример 1: Простой вывод элементов массива:
-
-let fruits = ["apple", "banana", "cherry"];
-
-fruits.forEach((fruit, index) => {
-  console.log(`Fruit at index ${index}: ${fruit}`);
-});
-
-// Пример 2: Увеличение каждого элемента на 1:
-
-let numbers = [1, 2, 3, 4, 5];
-let incrementedNumbers = [];
-
-numbers.forEach((number) => {
-  incrementedNumbers.push(number + 1);
-});
-
-console.log(incrementedNumbers);
-
-/// Пример 3: Фильтрация элементов массива:
-
-let scores = [85, 92, 78, 90, 88];
-let passingScores = [];
-
-scores.forEach((score) => {
-  if (score >= 90) {
-    passingScores.push(score);
-  }
-});
-
-console.log("Passing scores:", passingScores);
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = squareNumbers(numbers);
+console.log(squaredNumbers);
