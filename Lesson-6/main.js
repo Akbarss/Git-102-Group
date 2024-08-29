@@ -111,3 +111,15 @@ const numberss = [1, 2, 3, 4, 5, 6];
 const evens = filterEvenNumbers(numberss);
 console.log(evens);
 // Вывод: [2, 4, 6]
+
+function countCharacters(words) {
+  const result = [];
+  for (let i = 0; i < words.length; i++) {
+    result.push(words[i].length);
+  }
+  return result;
+}
+
+const words = ["apple", "banana", "cherry"];
+const result = countCharacters(words);
+console.log(result); // [5, 6, 6]
