@@ -47,3 +47,16 @@
 
 // const carsBrand = brandGet(cars);
 // console.log(carsBrand);
+
+const words = ["apple", "banana", "cherry"];
+
+function countCharacters() {
+  const char = [];
+  for (let num of words) {
+    char.push(num.length);
+  }
+  return char;
+}
+
+const result = countCharacters(words);
+console.log(result); // [5, 6, 6]

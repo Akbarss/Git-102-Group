@@ -40,7 +40,7 @@ for (const user of users) {
 // Вывод: Alice, Bob, Charlie
 
 // Пример 3: Итерация по массиву чисел и вычисление их суммы
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 let sum = 0;
 
 for (const number of numbers) {
@@ -123,3 +123,17 @@ function countCharacters(words) {
 const words = ["apple", "banana", "cherry"];
 const result = countCharacters(words);
 console.log(result); // [5, 6, 6]
+
+function findMax(arr) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+const numbers = [10, 20, 30, 40, 50];
+const maxNumber = findMax(numbers);
+console.log(maxNumber); // 50
