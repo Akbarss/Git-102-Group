@@ -48,15 +48,31 @@
 // const carsBrand = brandGet(cars);
 // console.log(carsBrand);
 
-const words = ["apple", "banana", "cherry"];
+// const words = ["apple", "banana", "cherry"];
 
-function countCharacters() {
-  const char = [];
-  for (let num of words) {
-    char.push(num.length);
+// function countCharacters() {
+//   const char = [];
+//   for (let num of words) {
+//     char.push(num.length);
+//   }
+//   return char;
+// }
+
+// const result = countCharacters(words);
+// console.log(result); // [5, 6, 6]
+
+function findMax(arr) {
+  let max = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
   }
-  return char;
+
+  return max;
 }
 
-const result = countCharacters(words);
-console.log(result); // [5, 6, 6]
+const numbers = [10, 20, 30, 40, 50, 90, 100];
+const maxNumber = findMax(numbers);
+console.log(maxNumber); // 50

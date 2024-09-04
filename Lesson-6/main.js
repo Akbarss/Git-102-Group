@@ -137,3 +137,23 @@ function findMax(arr) {
 const numbers = [10, 20, 30, 40, 50];
 const maxNumber = findMax(numbers);
 console.log(maxNumber); // 50
+
+function filterByAge(people, minAge) {
+  const result = [];
+  for (let i = 0; i < people.length; i++) {
+    if (people[i].age >= minAge) {
+      result.push(people[i]);
+    }
+  }
+  return result;
+}
+
+const people = [
+  { name: "John", age: 20 },
+  { name: "Jane", age: 30 },
+  { name: "Tom", age: 25 },
+];
+
+// const result = filterByAge(people, 25);
+console.log(result);
+// [{ name: 'Jane', age: 30 }, { name: 'Tom', age: 25 }]
