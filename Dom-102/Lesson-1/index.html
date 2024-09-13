@@ -4,17 +4,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>DOM Animation Example</title>
+	<style>
+		#box {
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	</style>
 </head>
 
 <body>
-	<header id="header">
-	</header>
-	<p class="paragraph">Paragraph</p>
-	<button id="buttonShowAlert">Show</button>
-
-	<button id="timeButton">Показать время</button>
-	<p id="timeDisplay"></p>
+	<div id="box"></div>
+	<button id="startButton">Start Animation</button>
 
 	<script src="./script.js"></script>
 </body>

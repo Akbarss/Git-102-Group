@@ -1,33 +1,26 @@
-let header = document.getElementById("header");
-let paragraph = document.querySelector(".paragraph");
+// Select the box and the button
+const box = document.getElementById("box");
+const startButton = document.getElementById("startButton");
 
-header.textContent = "Hello World";
+// Initialize position
+let position = 0;
 
-paragraph.style.color = "red";
-paragraph.style.fontSize = "20px";
+// Define the function to animate the box
+function animateBox() {
+  // Clear the interval if the box has reached the end of the screen
+  if (position >= window.innerWidth - box.offsetWidth) {
+    clearInterval(animationInterval);
+  } else {
+    position += 5; // Increase the position by 5px
+    box.style.left = position + "px"; // Update the box's position
+  }
+}
 
-// Создание нового элемента
-let newDiv = document.createElement("div");
-// Добавление содержимого
-newDiv.textContent = "Новый элемент";
-// Добавление на страницу
-document.body.appendChild(newDiv);
+// Variable to hold the interval ID
+let animationInterval;
 
-// Получение кнопки
-let button = document.getElementById("buttonShowAlert");
-
-// Добавление обработчика клика
-button.addEventListener("click", function () {
-  alert("Кнопка была нажата!");
+// Add an event listener to the button to start the animation
+startButton.addEventListener("click", () => {
+  // Start the animation with a setInterval
+  animationInterval = setInterval(animateBox, 20);
 });
-
-
-
-
-  const button2 = document.getElementById('timeButton');
-  const timeDisplay = document.getElementById('timeDisplay');
-  
-  button2.addEventListener('click', function() {
-    const currentTime = new Date().toLocaleTimeString();
-    timeDisplay.textContent = `Текущее время: ${currentTime}`;
-  });

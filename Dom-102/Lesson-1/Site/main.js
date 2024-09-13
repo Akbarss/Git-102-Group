@@ -74,4 +74,3 @@ footer.style.padding = "10px";
 footer.style.marginTop = "20px";
 footer.style.position = "relative";
 footer.style.bottom = "0";
-footer.style.width = "100%";
