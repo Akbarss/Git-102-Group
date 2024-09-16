@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* Добавленные CSS стили */
+		input.error {
+			border: 2px solid red;
+			background-color: #ffe6e6;
+		}
+
+		#result {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h2>Регистрация</h2>
+	<form id="registrationForm">
+		<label for="name">Имя:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<!-- <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br> -->
+
+		<button type="submit">Зарегистрироваться</button>
+	</form>
+
+	<p id="result"></p>
+
+
+	<script src="./script.js"></script>
+</body>
+
+</html>
