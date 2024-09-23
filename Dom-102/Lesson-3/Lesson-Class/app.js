@@ -3,17 +3,6 @@ const monthSelect = document.getElementById("month");
 const yearSelect = document.getElementById("year");
 const calendarDiv = document.getElementById("calendar");
 
-const input = document.getElementById("myInput");
-const input2 = document.getElementById("myInput2");
-
-input2.addEventListener("change", function () {
-  alert("Изменено значение:", input2.value);
-});
-
-input.addEventListener("keydown", function (event) {
-  alert("Клавиша нажата:", event.key);
-});
-
 // Заполняем выпадающий список годов
 const currentYear = new Date().getFullYear();
 for (let year = currentYear - 50; year <= currentYear + 50; year++) {
