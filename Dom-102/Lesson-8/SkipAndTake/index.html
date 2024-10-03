@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fake Store Users with Pagination</title>
+	<style>
+		.user {
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.user h2 {
+			font-size: 1.5em;
+			margin-bottom: 10px;
+		}
+
+		.user p {
+			margin: 5px 0;
+		}
+
+		.pagination {
+			margin: 20px;
+		}
+
+		button {
+			padding: 10px 15px;
+			margin: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Fake Store Users</h1>
+	<div id="users-container"></div>
+
+	<div class="pagination">
+		<button id="prev-btn" disabled>Previous</button>
+		<button id="next-btn">Next</button>
+	</div>
+
+	<script>
+		let currentPage = 0; // Track the current page
+		const take = 5; // Number of items to display per page
+		let users = []; // Array to store all users
+
+		// Fetch users from the API
+		fetch('https://fakestoreapi.com/users')
+			.then(response => response.json())
+			.then(data => {
+				users = data; // Store users in the array
+				displayUsers(); // Display the initial users
+				updateButtons(); // Update button states
+			})
+			.catch(error => console.error('Error fetching the users:', error));
+
+		// Display users for the current page
+		function displayUsers() {
+			const usersContainer = document.getElementById('users-container');
+			usersContainer.innerHTML = ''; // Clear previous users
+
+			const start = currentPage * take; // Calculate start index
+			const end = start + take; // Calculate end index
+
+			// Slice the users array to get the users for the current page
+			const usersToDisplay = users.slice(start, end);
+			usersToDisplay.forEach(user => {
+				const userCard = document.createElement('div');
+				userCard.classList.add('user');
+
+				const userName = document.createElement('h2');
+				userName.textContent = `${user.name.firstname} ${user.name.lastname}`;
+
+				const userEmail = document.createElement('p');
+				userEmail.textContent = `Email: ${user.email}`;
+
+				const userPhone = document.createElement('p');
+				userPhone.textContent = `Phone: ${user.phone}`;
+
+				const userAddress = document.createElement('p');
+				userAddress.textContent = `Address: ${user.address.street}, ${user.address.city}`;
+
+				userCard.appendChild(userName);
+				userCard.appendChild(userEmail);
+				userCard.appendChild(userPhone);
+				userCard.appendChild(userAddress);
+
+				usersContainer.appendChild(userCard);
+			});
+		}
+
+		// Update the state of the pagination buttons
+		function updateButtons() {
+			document.getElementById('prev-btn').disabled = currentPage === 0;
+			document.getElementById('next-btn').disabled = (currentPage + 1) * take >= users.length;
+		}
+
+		// Next button event listener
+		document.getElementById('next-btn').addEventListener('click', () => {
+			currentPage++;
+			displayUsers();
+			updateButtons();
+		});
+
+		// Previous button event listener
+		document.getElementById('prev-btn').addEventListener('click', () => {
+			currentPage--;
+			displayUsers();
+			updateButtons();
+		});
+	</script>
+</body>
+
+</html>
