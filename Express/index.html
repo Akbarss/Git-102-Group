@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Store Filter and Pagination</title>
+</head>
+
+<body>
+
+	<h1>Store Data</h1>
+	<p>Total Stores: <span id="store-count"></span></p>
+	<label for="subcategory">Filter by SubCategory:</label>
+	<select id="subcategory">
+		<option value="all">All</option>
+		<option value="5">Fast Food</option>
+		<option value="9">Uzbek Cuisine</option>
+		<option value="7">Pizzeria</option>
+	</select>
+
+	<button onclick="prevPage()">Previous</button>
+	<button onclick="nextPage()">Next</button>
+
+	<div id="store-list"></div>
+
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
